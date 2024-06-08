@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 type database struct {
 	host string
@@ -12,7 +15,7 @@ type Db interface {
 
 func (r *database) Get(id string) (string, error) {
 	fmt.Println("get method called")
-	return "1", nil
+	return id, nil
 
 }
 
@@ -28,9 +31,13 @@ func (r *Repository) Get(id string) (string, error) {
 }
 
 func main() {
+	num1 := "112"
+	digit1 = int(num1[0] - '0')
+	a := []int{1, 2}
+	sort.Ints(a)
 	db := &database{"satyam", 5505}
 	repo := NewRepo(db)
-	data, err := repo.Get("1")
+	data, err := repo.Get("11")
 	if err != nil {
 		fmt.Println("there is some error")
 	} else {
@@ -38,45 +45,3 @@ func main() {
 	}
 
 }
-
-// package main
-
-// import "fmt"
-
-// type Database struct {
-// 	Host string
-// 	Port int
-// }
-
-// type DB interface {
-// 	Get(id string) (string, error)
-// }
-
-// func (r *Database) Get(id string) (string, error) {
-// 	fmt.Println("get method called")
-// 	return "1", nil
-// }
-
-// type Repository struct {
-// 	db DB
-// }
-
-// func NewRepo(db DB) *Repository {
-// 	return &Repository{db}
-// }
-
-// func (r *Repository) Get(id string) (string, error) {
-// 	return r.db.Get(id)
-// }
-
-// func main() {
-// 	db := &Database{"satyam", 5050}
-// 	repo := NewRepo(db)
-// 	data, err := repo.Get("1")
-// 	if err != nil {
-// 		fmt.Println("there is some error")
-// 	} else {
-// 		fmt.Println(data)
-// 	}
-
-// }

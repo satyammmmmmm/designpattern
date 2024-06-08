@@ -1,0 +1,2 @@
+How would you implement the Factory Method pattern to create different payment gateway services (e.g., PayPal, Stripe, Square) in an e-commerce application? 
+Describe how the factory method ensures that the correct type of payment gateway is instantiated based on the user's selection.

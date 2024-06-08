@@ -1,0 +1,1 @@
+we'd like you to implement a simplified object creation system in Go using the Factory Method pattern.

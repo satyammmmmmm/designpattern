@@ -1,0 +1,1 @@
+How would you implement the Adapter pattern to integrate a modern application with a legacy API that has a different interface? Describe how the adapter converts the modern application's requests into a format understood by the legacy API.

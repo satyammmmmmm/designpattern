@@ -1,0 +1,2 @@
+How would you implement the Factory Method pattern to create notification services (e.g., email, SMS, push notifications) in an application?
+ Describe how the factory method ensures that the correct type of notification service is instantiated based on user preferences.
